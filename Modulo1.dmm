@@ -1,0 +1,1047 @@
+{
+	"tables": {
+		"6443733e-87dd-46f5-ade6-3982b41cdf84": {
+			"id": "6443733e-87dd-46f5-ade6-3982b41cdf84",
+			"visible": true,
+			"name": "Curso",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "2ccc1652-203f-4de1-8d92-eed76f7cd702",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "9c97fd29-42dc-497a-a52a-cada53af863d",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "100",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "eeaad81f-6881-42de-8a60-a4d40bc02090",
+					"name": "descripcion",
+					"datatype": "varchar",
+					"param": "256",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "5ab1882f-eed0-404b-a6f2-85cd7e7ea99a",
+					"name": "ultimosCursos",
+					"datatype": "e2fe10a6-a81e-4de8-90a0-f39913b608d2",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "100d173e-bec3-40da-b9df-b6675bbcb9c3",
+					"name": "fechaPublicacion",
+					"datatype": "date",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"1e886382-876e-475c-a55e-d0650785d883",
+				"0f99eab3-6df9-405f-aeaf-685777236379",
+				"35d39773-ab29-4002-95c9-46e1a500114b"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "1e23e416-8e5f-4d3b-b583-c8c412d96c9b",
+					"name": "Curso_pkey",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "45e0f957-a56c-4144-b0bf-f14b13bfb69d",
+							"colid": "2ccc1652-203f-4de1-8d92-eed76f7cd702"
+						}
+					],
+					"mssql": {
+						"clustered": true
+					}
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"699417ff-0cd1-4fe6-b514-93b9b553bd90": {
+			"id": "699417ff-0cd1-4fe6-b514-93b9b553bd90",
+			"visible": true,
+			"name": "Articulo",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "03afa95f-9ab2-49f1-a2c3-7ed94a641ba4",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ec47f9b5-d67a-4543-b65c-d179f29bfd0f",
+					"name": "Curso_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Curso"
+				},
+				{
+					"id": "a5e80658-04ff-495d-8890-c45783453333",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "100",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "8e2049fd-6c9a-49db-95eb-34529a31aafc",
+					"name": "idS3",
+					"datatype": "varchar",
+					"param": "max",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "d39f982b-0053-41f1-849a-24f5bfac0096",
+					"name": "idCMS",
+					"datatype": "varchar",
+					"param": "max",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "9494069c-ed0c-45e6-b050-4d39d477551a",
+					"name": "Autor_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Autor"
+				}
+			],
+			"relations": [
+				"0f99eab3-6df9-405f-aeaf-685777236379",
+				"89ff1031-d65a-4ac8-994e-b8bf4dd0b097"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "122d1a61-f374-495c-b289-1266d487b6ab",
+					"name": "Articulo_pkey",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "b5d2af6f-64eb-429b-b507-8257a374f2f4",
+							"colid": "03afa95f-9ab2-49f1-a2c3-7ed94a641ba4"
+						}
+					],
+					"mssql": {
+						"clustered": true
+					}
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"848c2cb1-65c6-4c35-a6b7-b2734e44de19": {
+			"id": "848c2cb1-65c6-4c35-a6b7-b2734e44de19",
+			"visible": true,
+			"name": "Video",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "320acb78-39fd-46eb-a926-f9b8e46fbfe4",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "abd0087a-ee36-4ea6-8ef2-6ec531aef183",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "100",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "6e0e8ff1-786c-4aeb-875e-2c2500c891c7",
+					"name": "Autor_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Autor"
+				},
+				{
+					"id": "8ad5d0a1-3858-404e-ab3b-5233c8354fe6",
+					"name": "Curso_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Curso"
+				},
+				{
+					"id": "b9932e5e-7ea4-4ca9-b205-a6e903d9b732",
+					"name": "Tematica_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Temática"
+				},
+				{
+					"id": "71c8c398-8291-4000-9749-4fe185f7c3cd",
+					"name": "idS3",
+					"datatype": "varchar",
+					"param": "max",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "3b4c4c58-af66-496f-a87a-190205eba974",
+					"name": "idCMS",
+					"datatype": "varchar",
+					"param": "max",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"88a00549-c617-48fc-8179-e67a195d8d87",
+				"1e886382-876e-475c-a55e-d0650785d883",
+				"63bd10fe-8f50-4e0c-b679-3acd9758ae20"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "89915954-edc2-4b0d-a10e-22ce7c663388",
+					"name": "Video_pkey",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "96a256a0-fdf7-4ea0-a00a-ac228c72b9d6",
+							"colid": "320acb78-39fd-46eb-a926-f9b8e46fbfe4"
+						}
+					],
+					"mssql": {
+						"clustered": true
+					}
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"3454c207-ac8b-4c89-9ac1-7dbf77e0f190": {
+			"id": "3454c207-ac8b-4c89-9ac1-7dbf77e0f190",
+			"visible": true,
+			"name": "Autor",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "cc02267a-3eda-4d71-9526-3208678f35e6",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ac8c82e7-831e-4d6e-8531-2a9cc6b2b0f8",
+					"name": "biografia",
+					"datatype": "16da9e5b-b161-4c97-b70d-ff8d981686da",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "1a4bab34-b704-47f7-9a04-27dd1f76736d",
+					"name": "Curso_id",
+					"datatype": "integer",
+					"pk": false,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					},
+					"fk": true,
+					"ref": "Curso"
+				}
+			],
+			"relations": [
+				"88a00549-c617-48fc-8179-e67a195d8d87",
+				"35d39773-ab29-4002-95c9-46e1a500114b",
+				"89ff1031-d65a-4ac8-994e-b8bf4dd0b097"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "da245d4a-6587-49f4-a284-1222a354abe6",
+					"name": "Autor_pkey",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "96fd29a7-6df5-4091-83bf-ee05c9974641",
+							"colid": "cc02267a-3eda-4d71-9526-3208678f35e6"
+						}
+					],
+					"mssql": {
+						"clustered": true
+					}
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"c890cd34-acc1-478e-8b2e-d80eb3f3ee1c": {
+			"id": "c890cd34-acc1-478e-8b2e-d80eb3f3ee1c",
+			"visible": true,
+			"name": "Temática",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "d48fad4c-1fb0-4ea3-a453-5e0d0b7eee9c",
+					"name": "id",
+					"datatype": "integer",
+					"pk": true,
+					"nn": true,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "ef26bc5e-6a0f-45e2-8f07-2b342947b71b",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "100",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [
+				"63bd10fe-8f50-4e0c-b679-3acd9758ae20"
+			],
+			"lines": [],
+			"keys": [
+				{
+					"id": "c31c5f45-707c-432d-9888-e4b5eb6e9a60",
+					"name": "Temática_pkey",
+					"isPk": true,
+					"cols": [
+						{
+							"id": "5bb688bf-2d67-40d8-9082-1560610ec596",
+							"colid": "d48fad4c-1fb0-4ea3-a453-5e0d0b7eee9c"
+						}
+					],
+					"mssql": {
+						"clustered": true
+					}
+				},
+				{
+					"id": "da5310b7-eba6-4869-b908-12bff0d66676",
+					"isPk": false,
+					"name": "Temática_key",
+					"cols": []
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "table",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"16da9e5b-b161-4c97-b70d-ff8d981686da": {
+			"id": "16da9e5b-b161-4c97-b70d-ff8d981686da",
+			"visible": true,
+			"name": "Biografía",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "b73ed3b7-d3cf-49fb-b4b2-081e8227a2b0",
+					"name": "id",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "629ea0c0-e96a-45c8-ac41-88b28e152d54",
+					"name": "nombre",
+					"datatype": "varchar",
+					"param": "100",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				},
+				{
+					"id": "66bb75cb-3b9b-4637-9dd7-80511531062f",
+					"name": "url",
+					"datatype": "varchar",
+					"param": "100",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "c9d84fed-7729-4dd1-96bc-05a4ac5b1c88",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [],
+					"mssql": {
+						"clustered": true
+					}
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "composite",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		},
+		"e2fe10a6-a81e-4de8-90a0-f39913b608d2": {
+			"id": "e2fe10a6-a81e-4de8-90a0-f39913b608d2",
+			"visible": true,
+			"name": "UltimosCursos",
+			"desc": "",
+			"estimatedSize": "",
+			"cols": [
+				{
+					"id": "01b0d35b-5f7d-466d-ab83-36c5552340ad",
+					"name": "id",
+					"datatype": "integer",
+					"param": "",
+					"pk": false,
+					"nn": false,
+					"comment": "",
+					"defaultvalue": "",
+					"data": "",
+					"collation": null,
+					"list": false,
+					"after": "",
+					"pg": {
+						"generatedIdentity": "no"
+					}
+				}
+			],
+			"relations": [],
+			"lines": [],
+			"keys": [
+				{
+					"id": "891b93a3-7095-4689-8fc4-a28564b31155",
+					"name": "Primary key",
+					"isPk": true,
+					"cols": [],
+					"mssql": {
+						"clustered": true
+					}
+				}
+			],
+			"indexes": [],
+			"embeddable": false,
+			"generate": true,
+			"generateCustomCode": true,
+			"objectType": "composite",
+			"pg": {
+				"rowsecurity": false,
+				"schema": ""
+			}
+		}
+	},
+	"relations": {
+		"88a00549-c617-48fc-8179-e67a195d8d87": {
+			"id": "88a00549-c617-48fc-8179-e67a195d8d87",
+			"visible": true,
+			"name": "Video_Autor_id_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "da245d4a-6587-49f4-a284-1222a354abe6",
+			"parent": "3454c207-ac8b-4c89-9ac1-7dbf77e0f190",
+			"child": "848c2cb1-65c6-4c35-a6b7-b2734e44de19",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "b7d1cdc4-9fae-4e5e-87a2-539b42877ba6",
+					"parentcol": "cc02267a-3eda-4d71-9526-3208678f35e6",
+					"childcol": "6e0e8ff1-786c-4aeb-875e-2c2500c891c7"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"1e886382-876e-475c-a55e-d0650785d883": {
+			"id": "1e886382-876e-475c-a55e-d0650785d883",
+			"visible": true,
+			"name": "Video_Curso_id_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "1e23e416-8e5f-4d3b-b583-c8c412d96c9b",
+			"parent": "6443733e-87dd-46f5-ade6-3982b41cdf84",
+			"child": "848c2cb1-65c6-4c35-a6b7-b2734e44de19",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "a9b27b46-f03b-4e35-8f03-23df633720ce",
+					"parentcol": "2ccc1652-203f-4de1-8d92-eed76f7cd702",
+					"childcol": "8ad5d0a1-3858-404e-ab3b-5233c8354fe6"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"0f99eab3-6df9-405f-aeaf-685777236379": {
+			"id": "0f99eab3-6df9-405f-aeaf-685777236379",
+			"visible": true,
+			"name": "Articulo_Curso_id_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "1e23e416-8e5f-4d3b-b583-c8c412d96c9b",
+			"parent": "6443733e-87dd-46f5-ade6-3982b41cdf84",
+			"child": "699417ff-0cd1-4fe6-b514-93b9b553bd90",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "ee58524b-30a3-4711-9527-4f6caaa1d796",
+					"parentcol": "2ccc1652-203f-4de1-8d92-eed76f7cd702",
+					"childcol": "ec47f9b5-d67a-4543-b65c-d179f29bfd0f"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"35d39773-ab29-4002-95c9-46e1a500114b": {
+			"id": "35d39773-ab29-4002-95c9-46e1a500114b",
+			"visible": true,
+			"name": "Autor_Curso_id_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "1e23e416-8e5f-4d3b-b583-c8c412d96c9b",
+			"parent": "6443733e-87dd-46f5-ade6-3982b41cdf84",
+			"child": "3454c207-ac8b-4c89-9ac1-7dbf77e0f190",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "many",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "030747a1-900b-4564-a638-b0760e47803a",
+					"parentcol": "2ccc1652-203f-4de1-8d92-eed76f7cd702",
+					"childcol": "1a4bab34-b704-47f7-9a04-27dd1f76736d"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"63bd10fe-8f50-4e0c-b679-3acd9758ae20": {
+			"id": "63bd10fe-8f50-4e0c-b679-3acd9758ae20",
+			"visible": true,
+			"name": "Video_Tematica_id_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "c31c5f45-707c-432d-9888-e4b5eb6e9a60",
+			"parent": "c890cd34-acc1-478e-8b2e-d80eb3f3ee1c",
+			"child": "848c2cb1-65c6-4c35-a6b7-b2734e44de19",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "one",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "9064f0c6-0f74-489a-9fda-a4a022dd88c0",
+					"parentcol": "d48fad4c-1fb0-4ea3-a453-5e0d0b7eee9c",
+					"childcol": "b9932e5e-7ea4-4ca9-b205-a6e903d9b732"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		},
+		"89ff1031-d65a-4ac8-994e-b8bf4dd0b097": {
+			"id": "89ff1031-d65a-4ac8-994e-b8bf4dd0b097",
+			"visible": true,
+			"name": "Articulo_Autor_id_fkey",
+			"desc": "",
+			"type": "identifying",
+			"parent_key": "da245d4a-6587-49f4-a284-1222a354abe6",
+			"parent": "3454c207-ac8b-4c89-9ac1-7dbf77e0f190",
+			"child": "699417ff-0cd1-4fe6-b514-93b9b553bd90",
+			"c_mp": "true",
+			"c_mch": "true",
+			"c_p": "many",
+			"c_ch": "many",
+			"c_cp": "",
+			"c_cch": "",
+			"cols": [
+				{
+					"id": "1adbfb59-70e8-4f82-9dd9-71654753b6da",
+					"parentcol": "cc02267a-3eda-4d71-9526-3208678f35e6",
+					"childcol": "9494069c-ed0c-45e6-b050-4d39d477551a"
+				}
+			],
+			"generate": true,
+			"generateCustomCode": true
+		}
+	},
+	"notes": {},
+	"lines": {},
+	"model": {
+		"name": "Modelado ELearning",
+		"id": "25138ed6-d595-4012-b1b6-b1e6f1e31708",
+		"activeDiagram": "9d284fbc-1843-48f6-940e-2c885d08f442",
+		"desc": "",
+		"path": "",
+		"type": "PG",
+		"version": 1,
+		"parentTableInFkCols": true,
+		"caseConvention": "under",
+		"replaceSpace": "_",
+		"color": "transparent",
+		"sideSelections": true,
+		"isDirty": true,
+		"storedin": {
+			"major": 6,
+			"minor": 4,
+			"extra": 2
+		},
+		"embeddedInParentsIsDisplayed": true,
+		"schemaContainerIsDisplayed": false,
+		"cardinalityIsDisplayed": false,
+		"estimatedSizeIsDisplayed": false,
+		"writeFileParam": false,
+		"currentDisplayMode": "metadata",
+		"def_coltopk": true,
+		"pg": {
+			"schema": ""
+		},
+		"sqlSettings": {
+			"wrapLines": true,
+			"wrapOffset": 80,
+			"indent": true,
+			"indentationString": "spaces",
+			"indentationSize": 2,
+			"limitItemsOnLine": true,
+			"maxListItemsOnLine": 3,
+			"statementDelimiter": ";",
+			"routineDelimiter": ";",
+			"keywordCase": "upper",
+			"identiferCase": "original",
+			"includeSchema": "always",
+			"quotation": "if_needed",
+			"includeGeneratedNames": "always"
+		},
+		"nameAutoGeneration": {
+			"keys": true,
+			"indexes": true,
+			"relations": true
+		},
+		"lastSaved": "Tue Jun 20 2023 13:29:38 GMT+0200 (hora de verano de Europa central)"
+	},
+	"otherObjects": {},
+	"diagrams": {
+		"9d284fbc-1843-48f6-940e-2c885d08f442": {
+			"name": "Main Diagram",
+			"description": "",
+			"id": "9d284fbc-1843-48f6-940e-2c885d08f442",
+			"keysgraphics": true,
+			"linegraphics": "detailed",
+			"zoom": 1,
+			"background": "#222222",
+			"lineColor": "transparent",
+			"isOpen": true,
+			"main": true,
+			"diagramItems": {
+				"6443733e-87dd-46f5-ade6-3982b41cdf84": {
+					"referencedItemId": "6443733e-87dd-46f5-ade6-3982b41cdf84",
+					"x": 408,
+					"y": 200,
+					"gHeight": 117,
+					"gWidth": 257,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"699417ff-0cd1-4fe6-b514-93b9b553bd90": {
+					"referencedItemId": "699417ff-0cd1-4fe6-b514-93b9b553bd90",
+					"x": 441,
+					"y": 31,
+					"gHeight": 135,
+					"gWidth": 210,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"848c2cb1-65c6-4c35-a6b7-b2734e44de19": {
+					"referencedItemId": "848c2cb1-65c6-4c35-a6b7-b2734e44de19",
+					"x": 73,
+					"y": 352,
+					"gHeight": 153,
+					"gWidth": 210,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"3454c207-ac8b-4c89-9ac1-7dbf77e0f190": {
+					"referencedItemId": "3454c207-ac8b-4c89-9ac1-7dbf77e0f190",
+					"x": 98,
+					"y": 38,
+					"gHeight": 81,
+					"gWidth": 197,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"c890cd34-acc1-478e-8b2e-d80eb3f3ee1c": {
+					"referencedItemId": "c890cd34-acc1-478e-8b2e-d80eb3f3ee1c",
+					"x": 429,
+					"y": 450,
+					"gHeight": 63,
+					"gWidth": 210,
+					"color": "#ffffff",
+					"background": "#03a9f4",
+					"resized": false,
+					"autoExpand": true
+				},
+				"16da9e5b-b161-4c97-b70d-ff8d981686da": {
+					"referencedItemId": "16da9e5b-b161-4c97-b70d-ff8d981686da",
+					"x": 94,
+					"y": 161,
+					"gHeight": 81,
+					"gWidth": 210,
+					"color": "#ffffff",
+					"background": "#ff9800",
+					"resized": false,
+					"autoExpand": true
+				},
+				"e2fe10a6-a81e-4de8-90a0-f39913b608d2": {
+					"referencedItemId": "e2fe10a6-a81e-4de8-90a0-f39913b608d2",
+					"x": 409,
+					"y": 341,
+					"gHeight": 45,
+					"gWidth": 150,
+					"color": "#ffffff",
+					"background": "#ff9800",
+					"resized": false,
+					"autoExpand": true
+				}
+			},
+			"scroll": {
+				"x": 0,
+				"y": 0
+			},
+			"type": "erd",
+			"showHorizontal": true,
+			"showDescriptions": true,
+			"showIndicators": true,
+			"showProgress": true,
+			"lineWidth": "2",
+			"boxSize": "0",
+			"showIndicatorCaptions": true
+		}
+	},
+	"order": [
+		"16da9e5b-b161-4c97-b70d-ff8d981686da",
+		"e2fe10a6-a81e-4de8-90a0-f39913b608d2",
+		"6443733e-87dd-46f5-ade6-3982b41cdf84",
+		"699417ff-0cd1-4fe6-b514-93b9b553bd90",
+		"848c2cb1-65c6-4c35-a6b7-b2734e44de19",
+		"3454c207-ac8b-4c89-9ac1-7dbf77e0f190",
+		"c890cd34-acc1-478e-8b2e-d80eb3f3ee1c",
+		"88a00549-c617-48fc-8179-e67a195d8d87",
+		"1e886382-876e-475c-a55e-d0650785d883",
+		"0f99eab3-6df9-405f-aeaf-685777236379",
+		"35d39773-ab29-4002-95c9-46e1a500114b",
+		"63bd10fe-8f50-4e0c-b679-3acd9758ae20",
+		"89ff1031-d65a-4ac8-994e-b8bf4dd0b097"
+	],
+	"collapsedTreeItems": [],
+	"reverseStats": {}
+}
